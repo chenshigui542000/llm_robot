@@ -5,6 +5,7 @@ import math
 import socketio
 import voice2text
 import generate_code
+import flask_test
 import sys
 import select
 
@@ -313,7 +314,7 @@ prompt = f""""
 messages = [{"role": "system", "content": prompt}]
 
 
-move_ahead(0.6)
+#move_ahead(0.6)
 # turn_right(140)
 # turn_left(140)
 # move_back(0.6)
@@ -323,7 +324,10 @@ while True:
     confirmed = input("准备好发出指令了吗？ y/n：")
     if confirmed.lower() == "y":
         # voice2text.get_text()
-        userinput = voice2text.get_text()
+        # userinput = voice2text.get_text()
+
+        #这里先用自己写的包实现voice2text
+        userinput = flask_test.voice2text()
         messages.append({"role": "user", "content": userinput})
         llm_answer = generate_code.generate_response(messages)
         messages.append({"role": "assistant", "content": llm_answer})

@@ -7,7 +7,11 @@ from openai import OpenAI
 # os.environ["https_proxy"] = "http://127.0.0.1:7890"
 # openai.api_base = "https://api.closeai-proxy.xyz/v1"
 # openai.api_key = "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"
-os.environ["OPENAI_API_KEY"] = "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"
+
+
+os.environ["OPENAI_API_KEY"] = "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"
+
+
 # asr = ASRExecutor()
 # result = asr(audio_file="received.wav")   #result是对.wav文件的识别结果
 # # print(result)

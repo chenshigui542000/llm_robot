@@ -9,6 +9,11 @@ import sys
 import pyttsx3
 import json
 
+#训练数据的数量
+TEST_COUNT = 0
+TEST_PATH = "test_data"
+
+
 sys.path.append('./google-servicecount.json')
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./google-servicecount.json"
 
@@ -65,13 +70,14 @@ prompt = f""""
     记住以上部分是代码段的部分，我还希望你可以与我交互，用自然语言回复我，比如
         我让你去拿一个瓶子，那么你不知道瓶子的位置，这时候你就需要问我文字的详细信息，然后
         得到这些详细信息之后再去拿瓶子。
-    返回的格式是一个json格式，比如：
+    返回的格式一定是一个json格式，比如：
         我给你的指令是：向前移动一个单位
-        那么你的回复应该是：
-        "
-            "code": "move_ahead(1)",
+        那么你的回复是一个json格式，并且这个json格式中包括两个字段，
+        具体为：
+            "code" : "move_ahead(1)",
             "reply": "好的，我将向前移动1一个单位"
-        "
+        注意：回答的一定是json格式，code字段中就只有代码，不能其他的内容，reply字段中是你有自然有语言回复我的内容，除此之外不能有除了这两个内容之外的其他内容。
+        
     ”“”
 
     
@@ -132,20 +138,89 @@ def text2voice(text):
     engine.runAndWait()
 
 
+def data2gpt():
+    files = os.listdir(TEST_PATH)
+    file_num = len(files)
+
+    for i in range(0,file_num):
+        file_name = os.path.join(TEST_PATH,"test" + str(i) + ".json")
+        file = open(file_name, 'r', encoding='utf-8')
+        file_data = file.read()
+        obj = json.loads(file_data)
+        print(obj)
+        messages.append({"role": "user", "content": obj[0]['question']})
+        messages.append({"role": "assistant", "content": obj[1]['answer']})
+
+
+
 
 if __name__ == '__main__':
-    request = voice2text()
-    messages.append({"role": "user", "content": request})
-    #print(request)
+    #request = voice2text()
 
-    response = generate_code.generate_response(messages)
-    #print(response)
-    data_json = json.loads(response)
-    code_data = data_json["code"]
-    reply_data = data_json["reply"]
+    file = open('test_data.json', 'r', encoding='utf-8')
+    file_data = file.read()
+    obj = json.loads(file_data)
 
 
-    text2voice(reply_data)
+    #将之前的数据喂给gpt
+    data2gpt()
+
+
+    for i in range(0,len(obj)):
+        #读出其中一个训练数据
+        request = obj["question" + str(i)]
+
+        print("提出来的问题: " + request)
+        #将这个数据加入到messages中
+
+        messages.append({"role": "user", "content": request})
+
+        #获取gpt回复的信息
+        response = generate_code.generate_response(messages)
+
+
+        #将回复的信息转成json格式
+        data_json = json.loads(response)
+
+
+        code_data = data_json["code"]
+
+        messages.append({"role": "assistant", "content": response})
+
+        reply_data = data_json["reply"]
+
+
+        #开始判断是否要将这次训练的数据写入到data中
+
+        print("得到的回答：\n" + response)
+
+        user_ans = input("是否要将本次训练的数据加入的data中（y|n):")
+
+        if user_ans == "y":
+            test_file_name = "test"+str(TEST_COUNT) + ".json"
+
+            TEST_COUNT = TEST_COUNT + 1
+            test_file_path = os.path.join(os.getcwd(),TEST_PATH, test_file_name)
+
+            print(test_file_path)
+            if not os.path.exists(test_file_path):
+                test_data = []
+                test_data.append({"question": request})
+                test_data.append({"answer": response})
+
+
+                with open(test_file_path, 'w', encoding='utf-8') as f:
+                    json.dump(test_data,f,ensure_ascii=False)
+
+
+
+
+
+
+
+
+
+    # text2voice(reply_data)
 
     #app.run(host='192.168.1.20' , port = 5002, debug=True)
     #app.run()
