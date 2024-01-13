@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "coastal-burner-411102",
+  "private_key_id": "c14cc6ab3e5ec44313ea76594e0fc344e1f8394f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDZvat93UHjzT+0\nY9a58Ur9Ekie4WbIKvGAEce3ykTc5Batj2Et0nkUBi2gkbMVm7l4Q313VwVlscs3\n1eqQZqmoFLHePDbvCyoJf2oyPbTgzj3OlPehJqqgiZ3e9IY99nSsQbpKByx03MdK\nO/EUKMuNF1ri4yL/YXKeyXgaLK6vElsw11XKtVLAe+5LACqh/iUQjn8w6yEd0GWB\n99nH9i35XBeQQ4/49E1P71nLTk3NkABodzaRFke3Gptv4v2dj5gaRA7L3uS1GBBO\nCbX6JoH5M/wZc63K5kUfRKu8eqE7fLP58pe6W7hs7yJn5YbQm6I0ilVpCjq6nhSC\n0sSY1M8bAgMBAAECggEAZD5qIXwnxZTM62O7i8eG2pP8Uwk6pJUAshF9fSPmKDvq\nJOWJu+rWS128y9vIMv6KmM+Zh8PMfFEqWf5mCyz4lqVQbhwSvmLJa635WkAGcikB\nU4ZJqyt+CoLQ58BzvTsl49gux74dvX+XUJngF4PgkohaE3K2vhRDDM98N7Cyi25y\nnvfeqRPPtSh04IDmIpdjdF4KD/vVIgCz/c1uxC4pONxQ9KEQzrxuiY9svq1xL1nC\nJFg1eCLUgLrSeiCySLNS/t5zMGqi+8KoWjXFwtdl0kgwJtitSoWy31WkSkWV+716\nCcVdSgl/aibSPCAXCayEqExGmufFHOYu2f+Yl4qMAQKBgQDuBuyDjMhnKtSPHTyO\nTGqPYL4q+Hl5vIdPzi/Z56VOopcq+o/pJ6/foDkAaZy3adzTEDtmPSYlFhrwUdIL\nn8QLu01P3gifnegVH6Je3j1JRb/n9bah/YwpzgGwdrW+ZQou1iwwd5F8wkvGCTqz\nSS90hB53QaWAHvTKnxccqZ9kgQKBgQDqLp0Wc2RYFBuyUhBBhL0KXsoQSriK2xwq\nuRj4+RVU+pzLC5Z8bfxmTgUZ91hUZ+IivOj0Mr5OyXWcwNfsuBI+zWNmddkXhkFJ\n+sx6Xb4Lt8fRoLpUcBjL9bl3A5KWMVcDvNgGimCJFXVWKv4nLE0Av1ADbPKgb4NQ\nM13TymR1mwKBgQCoC/FdKr6tv5pT8+M135N36Gg6NDSnEshBOqOj5xxZOQcay81g\nYamUayzzMpz3DOFfjd0x4EgW9NVOB6YQmNozIiiCE5LpBfW9PBlJewOvwHOtU1d+\nZGBZf1zH9fd4FSOsT37hNPldKFuQ1CFCRJAhZcmQjqNGohRXHRyXGtYygQKBgQDj\nPFIP2+6tjO2HLhw6BzyMWIhIIMlLa+u8BRoXVVN+vyPv3pGqserttp06ogli9d63\niImfk7GYr+HhNjsPp1mE+TWP0aDTM+IckDFkN5xWsIFDh2vmzVMyboEF3ECcXsop\nhVA1oIal3l2aPGObzV/27q0MdeZFCY/o/b746PZsKwKBgCCnIfAGCHmAhrkYOxEP\nc8TLAN6vrCv60qPJHf+zuDeTBHQr7mpvwtboklsO4KYFan6NZ/o5lUe5DyZneK/s\nDyYoy7PyX6I4KoYQ+4vPqDfUOJWLOLbS6sgXWi9Gy/zRerD+60czEyLEQKPS2q2i\n51o7B1FVJRzHkH9cRAAjzEpO\n-----END PRIVATE KEY-----\n",
+  "client_email": "llm-robot@coastal-burner-411102.iam.gserviceaccount.com",
+  "client_id": "107470415977486155512",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/llm-robot%40coastal-burner-411102.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
