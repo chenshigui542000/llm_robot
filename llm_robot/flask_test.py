@@ -8,6 +8,8 @@ import speech_recognition as sr
 import sys
 import pyttsx3
 import json
+import generate_data_plus
+
 
 #训练数据的数量
 TEST_COUNT = 0
@@ -157,9 +159,15 @@ def data2gpt():
 if __name__ == '__main__':
     #request = voice2text()
 
-    file = open('test_data.json', 'r', encoding='utf-8')
-    file_data = file.read()
-    obj = json.loads(file_data)
+    #从文件中获取训练数据
+    # file = open('test_data.json', 'r', encoding='utf-8')
+    # file_data = file.read()
+
+
+
+    #直接用数据生成器生成数据
+    question_count = input("训练问题数量：")
+    obj = json.loads(generate_data_plus.get_train_data(int(question_count)))
 
 
     #将之前的数据喂给gpt
@@ -194,9 +202,14 @@ if __name__ == '__main__':
 
         print("得到的回答：\n" + response)
 
-        user_ans = input("是否要将本次训练的数据加入的data中（y|n):")
+        user_ans = input("\n是否要将本次训练的数据加入的data中（y|n):")
+        print("\n\n")
 
         if user_ans == "y":
+
+            files = os.listdir(TEST_PATH)
+            TEST_COUNT = len(files)
+
             test_file_name = "test"+str(TEST_COUNT) + ".json"
 
             TEST_COUNT = TEST_COUNT + 1
