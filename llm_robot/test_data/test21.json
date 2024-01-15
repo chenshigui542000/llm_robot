@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 [{"question": "向右后方向移动38米,再右后方行走7米,然后右后方走5米,接着往左转212度"}, {"answer": "{\n\"code\" : \"turn_right(135)\\nmove_ahead(38)\\nturn_right(135)\\nmove_ahead(7)\\nturn_right(135)\\nmove_ahead(5)\\nturn_left(212)\",\n\"reply\": \"好的，我将向右后方向移动38米，再右后方行走7米，然后右后方走5米，接着往左转212度\"\n}"}]
-=======
-[{"question": "往右后面行走36米,向右转85度,接着左后行走5米"}, {"answer": "{\n\"code\" : \"turn_right(135)\\nmove_back(36)\\nturn_right(85)\\nmove_back(5)\",\n\"reply\": \"好的，我将往右后面行走36米，向右转85度，接着左后行走5米\"\n}"}]
->>>>>>> csg
