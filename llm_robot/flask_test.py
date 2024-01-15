@@ -149,7 +149,6 @@ def data2gpt():
         file = open(file_name, 'r', encoding='utf-8')
         file_data = file.read()
         obj = json.loads(file_data)
-        print(obj)
         messages.append({"role": "user", "content": obj[0]['question']})
         messages.append({"role": "assistant", "content": obj[1]['answer']})
 
@@ -159,6 +158,8 @@ def data2gpt():
 if __name__ == '__main__':
     #request = voice2text()
 
+    test = os.path.join(os.getcwd(), TEST_PATH)
+    print(test)
     #从文件中获取训练数据
     # file = open('test_data.json', 'r', encoding='utf-8')
     # file_data = file.read()

@@ -9,7 +9,7 @@ from openai import OpenAI
 # openai.api_key = "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"
 
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 
 # asr = ASRExecutor()

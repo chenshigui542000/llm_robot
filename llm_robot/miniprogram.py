@@ -37,7 +37,7 @@ def socket_io_thread():
     sio = socketio.Client()
 
     # Socket.IO服务器地址和端口号
-    socket_url = 'http://192.168.1.238:8005'
+    socket_url = 'http://192.168.200.118:8005'
 
     # 定义事件名称
     odom_subscribe_event = 'odomSubscribe'
