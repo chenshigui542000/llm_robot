@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-[{"question": "左转191度,再右后前进23米"}, {"answer": "{\n\"code\" : \"turn_left(191)\\nturn_right(135)\\nmove_ahead(23)\",\n\"reply\": \"好的，我将左转191度，然后右后前进23米\"\n}"}]
-=======
 [{"question": "往左前方向走36米,接着往左转307度,然后右转271度"}, {"answer": "{\n\"code\" : \"turn_left(45)\\nmove_ahead(36)\\nturn_left(307)\\nturn_right(271)\",\n\"reply\": \"好的，我将往左前方向走36米，接着往左转307度，然后右转271度\"\n}"}]
->>>>>>> csg
