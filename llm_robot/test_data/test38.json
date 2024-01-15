@@ -1,0 +1,1 @@
+[{"question": "右后边行走4米,左转328度,接着往左后方行走39米,接着往左后行走9米,左后面前进13米"}, {"answer": "{\n\"code\" : \"turn_right(135)\\nmove_ahead(4)\\nturn_left(328)\\nturn_left(135)\\nmove_ahead(39)\\nturn_left(135)\\nmove_ahead(9)\\nturn_left(135)\\nmove_ahead(13)\",\n\"reply\": \"好的，我将右后边行走4米，左转328度，接着往左后方行走39米，接着往左后行走9米，左后面前进13米\"\n}"}]

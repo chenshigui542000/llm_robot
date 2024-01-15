@@ -1,0 +1,1 @@
+[{"question": "往右后边行走6米,然后右转52度,再右转341度,向右转101度,往右后走24米"}, {"answer": "{\n\"code\" : \"turn_right(135)\\nmove_ahead(6)\\nturn_right(52)\\nturn_right(341)\\nturn_right(101)\\nturn_right(135)\\nmove_ahead(24)\",\n\"reply\": \"好的，我将往右后边行走6米，然后右转52度，再右转341度，向右转101度，往右后走24米\"\n}"}]

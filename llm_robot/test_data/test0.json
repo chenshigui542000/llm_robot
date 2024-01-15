@@ -1,1 +1,1 @@
-[{"question": "向前移动5米"}, {"answer": "{\n\"code\" : \"move_ahead(5)\",\n\"reply\": \"好的，我将向前移动5米\"\n}"}]
+[{"question": "右后走42米,接着右转126度,接着右转257度,接着向左后边行走24米,往右后边行走50米"}, {"answer": "{\n\"code\" : \"turn_right(135)\\nmove_ahead(42)\\nturn_right(126)\\nturn_right(257)\\nturn_left(135)\\nmove_ahead(24)\\nturn_right(135)\\nmove_ahead(50)\",\n\"reply\": \"好的，我将右后走42米，接着右转126度，接着右转257度，接着向左后边行走24米，往右后边行走50米\"\n}"}]

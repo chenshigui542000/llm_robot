@@ -1,0 +1,1 @@
+[{"question": "向右后方向走14米,左后方行走23米"}, {"answer": "{\n\"code\" : \"turn_right(135)\\nmove_ahead(14)\\nturn_left(135)\\nmove_ahead(23)\",\n\"reply\": \"好的，我将向右后方向走14米，左后方行走23米\"\n}"}]

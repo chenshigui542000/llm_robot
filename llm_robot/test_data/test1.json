@@ -1,1 +1,1 @@
-[{"question": "左转45度，再向前走100米"}, {"answer": "{\n\"code\" : \"turn_left(45)\\nmove_ahead(100)\",\n\"reply\": \"好的，我将左转45度，然后向前走100米\"\n}"}]
+[{"question": "左后面移动36米,左后面前进11米,接着往右后行走7米,向右转80度,左后方向行走29米"}, {"answer": "{\n\"code\" : \"turn_left(135)\\nmove_ahead(36)\\nturn_left(135)\\nmove_ahead(11)\\nturn_right(135)\\nmove_ahead(7)\\nturn_right(80)\\nturn_left(135)\\nmove_ahead(29)\",\n\"reply\": \"好的，我将左后面移动36米，左后面前进11米，接着往右后行走7米，向右转80度，左后方向行走29米\"\n}"}]
