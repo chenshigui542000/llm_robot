@@ -5,7 +5,7 @@ import signal
 import json
 
 # Socket.IO服务器地址和端口号
-socket_url = 'http://192.168.1.238:8005'
+socket_url = 'http://192.168.200.118:8005'
 
 #控制速度api，x表示向前速度，y代表向左速度，z代表转动角速度（xy表示机器人所在二维平面坐标系）
 #移动速度不要超过0.1，转动速度不要超过0.2
@@ -70,7 +70,7 @@ def nav2positon(position_x, positon_y, positon_z, orientation_x, orientation_y, 
         # 在这里处理服务器响应
 
     # 启动Socket.IO客户端
-    sio.connect(socket_url)
+    sio.connect(socket_url, wait_timeout=10)
 
 def calculate_rotation_angle(x, y, z, w):  #利用四元数来计算机器人绕z轴的旋转角度，方向与x轴重合时为0，向左转为正
     # 计算旋转矩阵中的分量
