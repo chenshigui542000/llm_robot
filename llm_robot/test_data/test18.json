@@ -1,2 +1,5 @@
 [{"question": "右转157度,再往左前前进48米,再左转198度,接着往右前移动35米"}, {"answer": "{\n\"code\" : \"turn_right(157)\\nturn_left(45)\\nmove_ahead(48)\\nturn_left(198)\\nturn_right(45)\\nmove_ahead(35)\",\n\"reply\": \"好的，我将右转157度，然后往左前前进48米，再左转198度，接着往右前移动35米\"\n}"}]
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0152369c77c768a5fea276ec2e8f180ba2a0b78b
