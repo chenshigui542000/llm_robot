@@ -3,7 +3,7 @@ import threading
 import time
 import math
 import socketio
-import voice2text
+
 import generate_code
 import flask_test
 import sys

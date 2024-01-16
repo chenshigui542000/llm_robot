@@ -1,5 +1,2 @@
-<<<<<<< HEAD
-[{"question": "左前方走9米"}, {"answer": "{\n\"code\" : \"turn_left(45)\\nmove_ahead(9)\",\n\"reply\": \"好的，我将左前方走9米\"\n}"}]
-=======
 [{"question": "向左转298度,向左转48度"}, {"answer": "{\n\"code\" : \"turn_left(298)\\nturn_left(48)\",\n\"reply\": \"好的，我将向左转298度，然后再向左转48度\"\n}"}]
->>>>>>> csg
+
